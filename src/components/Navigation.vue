@@ -3,6 +3,9 @@
     <b-navbar-nav>
       <ul ref="nav">
         <b-navbar-brand class="image-logo" @click="toggleNav">
+          <a href="/"> <img :src="imagePath" height="20px" /></a>
+        </b-navbar-brand>
+        <b-navbar-brand class="image-logo-mobile" @click="toggleNav">
           <img :src="imagePath" height="20px" />
         </b-navbar-brand>
 
@@ -105,6 +108,9 @@ nav {
         left: 0px;
       }
       .image-logo {
+        display: none;
+      }
+      .image-logo-mobile {
         position: fixed;
         padding-left: 20px;
         top: 10px;
@@ -130,6 +136,9 @@ nav {
 @media screen and (min-width: 759px) {
   img {
     padding-left: 15px;
+  }
+  .image-logo-mobile {
+    display: none;
   }
 }
 </style>
